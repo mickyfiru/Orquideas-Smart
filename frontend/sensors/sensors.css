@@ -1,0 +1,37 @@
+.sensor-page-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+.sensor-page-heading h1 { font-size: clamp(25px, 3vw, 35px); font-weight: 800; letter-spacing: -.045em; }
+.sensor-page-heading p { color: var(--muted); font-size: 14px; margin-top: 3px; }
+.sensor-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.sensor-card { padding: 18px; }
+.source-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+.source-options button { text-align: left; display: flex; gap: 8px; align-items: center; border: 1px solid var(--border); border-radius: 10px; padding: 10px; font-size: 13px; }
+.source-options button svg { flex: none; }
+.source-options button small { display: block; font-size: 11px; color: var(--muted); }
+.source-options button[aria-pressed=true] { border-color: #539f83; background: #e7f5ee; color: #096748; }
+.source-options button:disabled { opacity: .65; cursor: default; }
+.port-actions { display: flex; gap: 8px; align-items: end; flex-wrap: wrap; margin-top: 14px; }
+.port-actions label { display: grid; flex: 1 1 145px; min-width: 0; gap: 4px; font-size: 12px; font-weight: 700; }
+.port-actions select { width: 100%; height: 36px; padding: 5px 7px; border: 1px solid #cbdad2; border-radius: 8px; background: white; }
+.sensor-actions { margin-top: 12px; }
+.sensor-help { color: var(--muted); font-size: 12px; margin-top: 9px; }
+.sensor-warning { color: #8a4b14; }
+.sensor-section-heading { margin: 25px 0 11px; font-size: 19px; font-weight: 800; }
+.sensor-card-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.sensor-details { margin-bottom: 0; }
+.sensor-details dd small { font-weight: 500; display: block; color: #864c11; }
+.environmental-card h2 { font-size: 14px; font-weight: 800; margin-top: 7px; }
+.environmental-card p { color: var(--muted); font-size: 12px; }
+.monitoring-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(256px, .4fr); gap: 16px; align-items: start; margin-top: 16px; }
+.sensor-critical { display: flex; align-items: flex-start; gap: 9px; color: #8c3038; border: 1px solid #f4d8da; background: #fdf0f1; border-radius: 10px; padding: 10px 13px; margin-bottom: 12px; font-size: 13px; }
+.sensor-critical p { margin-top: 2px; }
+.sensor-reading-time { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); margin-top: 16px; }
+.tolerance-form { justify-items: start; }
+.tolerance-form label { width: 100%; }
+.tolerance-form .irrigation-success { margin-bottom: 0; }
+@media (max-width: 940px) {
+  .monitoring-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 750px) {
+  .sensor-controls { grid-template-columns: 1fr; gap: 10px; }
+  .sensor-card { padding: 14px; }
+}

@@ -1,0 +1,89 @@
+.irrigation-page-header, .irrigation-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.irrigation-page-header { margin-bottom: 20px; flex-wrap: wrap; }
+.irrigation-page-header h1 { font-size: clamp(26px, 3vw, 35px); font-weight: 800; letter-spacing: -.045em; }
+.irrigation-page-header p { color: var(--muted); font-size: 14px; margin-top: 3px; }
+.irrigation-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .42fr); gap: 16px; align-items: start; }
+.irrigation-aside, .irrigation-bottom { display: grid; gap: 16px; min-width: 0; }
+.irrigation-bottom { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 16px; align-items: start; }
+.irrigation-card { padding: 18px; }
+.irrigation-heading h2 { font-size: 19px; font-weight: 800; letter-spacing: -.025em; }
+.irrigation-heading p { color: var(--muted); font-size: 12px; margin-top: 3px; }
+.month-heading h2::first-letter, .agenda h2::first-letter { text-transform: uppercase; }
+.month-controls, .row-actions, .dialog-actions { display: flex; gap: 6px; align-items: center; }
+.icon-button, .irrigation-button { display: inline-flex; align-items: center; justify-content: center; flex: none; gap: 7px; border: 1px solid var(--border); border-radius: 9px; color: #255647; background: white; font-weight: 700; }
+.icon-button { height: 36px; width: 36px; }
+.irrigation-button { min-height: 36px; padding: 7px 11px; font-size: 13px; }
+.icon-button:hover, .irrigation-button:hover { background: #eef7f2; }
+.icon-button:disabled, .irrigation-button:disabled { cursor: default; opacity: .55; }
+.irrigation-button.primary { background: #087956; border-color: #087956; color: white; }
+.irrigation-button.primary:hover { background: #096948; }
+.irrigation-button.danger { background: #a13238; border-color: #a13238; color: white; }
+.irrigation-button.danger:hover { background: #83252a; }
+.danger-icon { color: #9c3741; }
+.danger-icon:hover { background: #fcf0f0; }
+.complete-button { background: #edf8f2; }
+.month-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 5px; margin-top: 14px; }
+.weekday { text-align: center; font-size: 12px; font-weight: 700; color: var(--muted); padding: 7px 0; }
+.month-day, .outside-month { min-height: clamp(60px, 6vw, 88px); border-radius: 8px; }
+.month-day { display: flex; align-items: flex-start; flex-direction: column; gap: 4px; padding: 6px; min-width: 0; text-align: left; border: 1px solid var(--border); background: #fff; }
+.month-day:hover { background: #f1f8f4; }
+.month-day[aria-pressed=true] { border-color: #168765; background: #e9f7ef; }
+.day-number { font-size: 13px; font-weight: 700; display: grid; place-items: center; width: 22px; height: 22px; }
+.month-day[aria-current=date] .day-number { background: #087956; color: white; border-radius: 7px; }
+.outside-month { background: #f7f9f8; }
+.day-marker { display: flex; align-items: center; gap: 3px; font-size: 10px; line-height: 1.1; font-weight: 700; color: #70439a; }
+.day-marker i { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex: none; }
+.day-marker.done { color: #087452; }
+.calendar-legend { display: none; }
+.watering-list { margin-top: 12px; max-height: 360px; overflow: auto; }
+.watering-list li, .reminder-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 2px; border-top: 1px solid var(--border); }
+.watering-list strong, .reminder-item strong { display: block; font-size: 13px; overflow-wrap: anywhere; }
+.watering-list p, .reminder-item p { color: var(--muted); font-size: 12px; margin-top: 2px; }
+.watering-list .status-pill { flex: none; }
+.irrigation-empty { margin-top: 13px; padding: 12px; background: #f5f8f6; border-radius: 8px; color: var(--muted); font-size: 13px; }
+.irrigation-muted { color: var(--muted); font-size: 12px; }
+.irrigation-error, .irrigation-success { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; padding: 9px 12px; border-radius: 8px; margin-bottom: 12px; font-size: 13px; }
+.irrigation-error { background: #fff0ed; color: #8e3034; }
+.irrigation-success { background: #e4f5ea; color: #096748; }
+.irrigation-dialog { inset: 0; margin: auto; padding: 20px; width: min(490px, calc(100% - 24px)); max-height: calc(100dvh - 32px); overflow: auto; }
+.irrigation-dialog::backdrop { background: #102d258f; }
+.irrigation-form { display: grid; gap: 12px; margin-top: 14px; }
+.irrigation-form label, .irrigation-form legend { display: grid; gap: 5px; font-size: 13px; font-weight: 700; min-width: 0; }
+.irrigation-form label > :is(input:not([type=checkbox]), select) { width: 100%; min-width: 0; padding: 7px 8px; border: 1px solid #cbdad2; border-radius: 8px; color: #192c26; background: #fff; min-height: 37px; }
+.form-columns { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.weekday-controls { display: flex; flex-wrap: wrap; gap: 8px 12px; margin-top: 6px; }
+.weekday-controls label { display: flex; align-items: center; }
+.weekday-controls input { appearance: auto; accent-color: #087956; }
+.dialog-actions { justify-content: flex-end; flex-wrap: wrap; margin-top: 6px; }
+.delete-details { margin: 16px 0; color: var(--muted); font-size: 14px; }
+.reminder-center { position: relative; margin-left: auto; }
+.reminder-toggle { position: relative; }
+.reminder-toggle span { position: absolute; top: -6px; right: -6px; border-radius: 15px; background: #7951ac; color: #fff; font-size: 10px; min-width: 17px; height: 17px; display: grid; place-items: center; padding: 0 3px; }
+.reminder-panel, .reminder-toast { position: absolute; top: 47px; right: 0; width: min(360px, calc(100vw - 28px)); z-index: 4; box-shadow: 0 10px 28px #17332820; padding: 14px; }
+.reminder-panel > :is(p, button, a) { margin-top: 8px; }
+.reminder-list { margin-top: 11px; max-height: min(45vh, 320px); overflow: auto; }
+.reminder-item { padding-inline: 7px; }
+.reminder-item.unread { background: #f7f1fd; border-radius: 7px; }
+.reminder-item small { color: var(--muted); font-size: 11px; }
+.reminder-toast { display: flex; align-items: center; gap: 9px; color: #63408e; font-size: 13px; }
+.reminder-toast span { flex: 1; overflow-wrap: anywhere; }
+.reminder-toast .icon-button { height: 27px; width: 27px; }
+.metric-value.irrigation-date-value { font-size: clamp(16px, 1.45vw, 22px); letter-spacing: -.04em; min-height: 39px; align-items: center; }
+.metric .text-link { font-size: 12px; margin-top: 4px; }
+@media (max-width: 1000px) {
+  .irrigation-main { grid-template-columns: minmax(0, 1fr); }
+  .irrigation-aside { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+}
+@media (max-width: 680px) {
+  .irrigation-card { padding: 11px; }
+  .irrigation-main, .irrigation-aside, .irrigation-bottom { gap: 10px; }
+  .irrigation-aside, .irrigation-bottom { grid-template-columns: 1fr; }
+  .month-grid { gap: 3px; }
+  .month-day, .outside-month { min-height: 51px; }
+  .month-day { padding: 2px 3px; }
+  .day-marker span { display: none; }
+  .calendar-legend { display: flex; gap: 12px; margin-top: 10px; }
+  .month-heading h2 { font-size: 16px; }
+  .month-controls .icon-button { width: 30px; }
+  .reminder-panel { max-height: 80dvh; overflow: auto; }
+}

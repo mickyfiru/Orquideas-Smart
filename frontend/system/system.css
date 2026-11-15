@@ -1,0 +1,27 @@
+.system-module > .history-table-card { margin-top: 16px; }
+.system-module label { display: grid; gap: 4px; font-size: 12px; font-weight: 700; min-width: 0; }
+.system-module select, .system-module input:not([type=checkbox]) { width: 100%; min-width: 0; min-height: 36px; padding: 5px 7px; border: 1px solid #cbdad2; border-radius: 8px; background: white; color: #192c26; }
+.alert-type strong, .notification-category { display: flex; align-items: center; gap: 6px; }
+.alert-type span, .system-module td small, .system-module dd small { display: block; font-size: 11px; color: var(--muted); }
+.alert-type small { max-width: 250px; white-space: normal; }
+.status-pill.alert-critical { color: #913642; background: #fbecef; }
+.notification-category { color: #6b4c96; font-size: 11px; font-weight: 700; }
+.notification-category.connection { color: #8a4b14; }
+.notification-category.irrigation { color: #087452; }
+.notification-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; font-size: 12px; }
+.settings-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; align-items: start; }
+.settings-stack { display: grid; gap: 15px; }
+.settings-form { margin-top: 14px; }
+.settings-fields { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+.settings-preview { display: grid; gap: 6px; padding: 10px 12px; margin: 12px 0; background: #eef7f2; border-radius: 8px; font-size: 12px; }
+.settings-preview div { display: flex; justify-content: space-between; gap: 8px; }
+.settings-preview dd { font-weight: 700; color: #096748; }
+.settings-switches { display: grid; gap: 11px; margin: 15px 0 8px; }
+.system-module .settings-switches label { display: flex; align-items: start; gap: 8px; }
+.settings-switches input { margin-top: 2px; accent-color: #087956; }
+.settings-actions { margin: 12px 0 4px; }
+.settings-grid .irrigation-success, .settings-grid .irrigation-error { margin-top: 7px; }
+.dashboard-alert-status { margin-top: 16px; padding: 13px 17px; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; font-size: 13px; }
+.dashboard-alert-status div { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+.dashboard-alert-status .text-link { margin-left: auto; font-size: 12px; }
+@media (max-width: 900px) { .settings-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,53 @@
+.history-module { display: grid; gap: 15px; min-width: 0; }
+.history-page-heading, .history-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.history-page-heading h1 { font-size: clamp(25px, 3vw, 35px); font-weight: 800; letter-spacing: -.045em; }
+.history-page-heading p, .history-section-heading p { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.history-section-heading h2 { font-size: 16px; font-weight: 800; letter-spacing: -.2px; }
+.history-filters, .history-overview, .history-table-card { padding: 17px; }
+.history-fields { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 14px 0 12px; }
+.history-module label { display: grid; gap: 4px; font-size: 12px; font-weight: 700; min-width: 0; }
+.history-module select, .history-module input { width: 100%; min-width: 0; min-height: 36px; padding: 5px 7px; border: 1px solid #cbdad2; border-radius: 8px; background: white; color: #192c26; }
+.history-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: end; }
+.history-storage { padding: 0 14px; }
+.history-storage summary { cursor: pointer; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 8px; padding: 11px 0; color: #255647; }
+.history-storage summary::after { content: '⌄'; margin-left: auto; font-size: 15px; }
+.history-storage[open] summary::after { transform: rotate(180deg); }
+.history-storage summary small { background: #eef5f1; border-radius: 9px; padding: 2px 6px; font-size: 11px; color: var(--muted); white-space: nowrap; }
+.history-storage-form { padding: 3px 0 12px; display: grid; gap: 9px; color: var(--muted); font-size: 12px; }
+.history-storage-form label { min-width: 135px; }
+.history-saved { color: #096748; font-weight: 700; }
+.history-statistics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.history-statistics article { padding: 14px; }
+.history-statistics h2 { color: #344e43; font-size: 13px; font-weight: 800; margin-top: 9px; }
+.history-statistics strong { display: block; font-family: Manrope, system-ui, sans-serif; letter-spacing: -.55px; font-size: clamp(20px, 2.2vw, 28px); font-weight: 800; }
+.history-statistics p { font-size: 12px; color: var(--muted); }
+.history-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 13px; }
+.history-chart-legend { margin-top: 13px; }
+.history-chart-caption { color: var(--muted); font-size: 11px; }
+.history-table-scroll { max-width: 100%; overflow-x: auto; margin-top: 12px; }
+.history-table-scroll:focus-visible { outline: 2px solid #117d60; outline-offset: 2px; }
+.history-table-scroll table { width: 100%; min-width: 620px; border-collapse: collapse; text-align: left; font-size: 13px; }
+.history-table-scroll th, .history-table-scroll td { padding: 9px 10px; border-bottom: 1px solid #e6eee9; white-space: nowrap; }
+.history-table-scroll th { background: #f2f7f4; color: #345448; font-size: 12px; }
+.history-table-scroll th button { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; }
+.history-table-scroll th[aria-sort] button { color: #087452; }
+.history-table-scroll tbody tr:hover { background: #f7faf8; }
+.history-pager { display: flex; justify-content: space-between; align-items: center; gap: 9px; flex-wrap: wrap; margin-top: 10px; font-size: 12px; color: var(--muted); }
+.history-pager > div { display: flex; gap: 6px; }
+.history-empty { margin-top: 12px; padding: 13px; background: #f5f8f6; border-radius: 8px; color: var(--muted); font-size: 13px; }
+.history-alert-context { padding: 10px 14px; }
+.history-alert-context p { margin: 0; font-size: 12px; }
+.history-alert-context a { font-size: 12px; }
+.history-table-card .irrigation-error, .history-overview .irrigation-error { margin-top: 12px; }
+.dashboard-chart-heading { justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+.dashboard-chart-heading .text-link { font-size: 12px; }
+@media (max-width: 930px) {
+  .history-fields, .history-statistics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .history-filters, .history-overview, .history-table-card { padding: 12px; }
+  .history-statistics { gap: 8px; }
+  .history-statistics article { padding: 11px; }
+  .history-fields label:first-child { grid-column: 1 / -1; }
+  .history-module select, .history-module input { font-size: 12px; }
+}
